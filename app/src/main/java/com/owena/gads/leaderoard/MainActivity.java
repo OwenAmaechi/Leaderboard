@@ -1,17 +1,11 @@
 package com.owena.gads.leaderoard;
 
 import android.os.Bundle;
-import com.google.android.material.tabs.TabLayout;
-import com.owena.gads.leaderoard.adapters.LeaderBoardAdapter;
-
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.view.Menu;
-import android.view.MenuItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
