@@ -17,5 +17,11 @@
     <string name="tag_fragment_skill_iq">Skill IQ Leaders</string>
     <string name="tag_fragment_learning">Learning Leaders</string>
     <string name="appbar_title">LEADERBOARD</string>
+    <string name="top_learner_image">top_learner_image</string>
+    <string name="txt_display">Place Holder</string>
+
+    <string name="skill_id_image">skill_id_image</string>
+
+    <string name="learning_hours">\" learning hours,\"</string>
     <string name="btn_submit">Submit</string>
 </resources>
