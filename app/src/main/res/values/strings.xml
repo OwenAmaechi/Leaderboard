@@ -1,19 +1,11 @@
 <resources>
     <string name="app_name">Leaderboard</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="tab_learning_leaders">Learning Leaders</string>
     <string name="tab_skill_iq_leaders">Skill IQ Leaders</string>
 
     <string name="tab_title_skill_iq">Skill IQ Leaders</string>
-    <string name="tab_title_leraning">Leraning Leaders</string>
+    <string name="tab_title_learning">Learning Leaders</string>
     <string name="tag_fragment_skill_iq">Skill IQ Leaders</string>
     <string name="tag_fragment_learning">Learning Leaders</string>
     <string name="appbar_title">LEADERBOARD</string>
@@ -28,4 +20,6 @@
     <string name="project_on_github_link">Project on GITHUB (link)</string>
     <string name="last_name">Last Name</string>
     <string name="first_name">First Name</string>
+    <string name="submission_message">Are you sure</string>
+    <string name="submission_yes">Yes</string>
 </resources>
