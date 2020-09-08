@@ -22,7 +22,7 @@
         <item name="android:windowBackground">@drawable/launch</item>
     </style>
     <!-- Main Screen Theme -->
-    <style name="MainScreenTheme" parent="AppTheme.NoActionAndStatusBar">
+    <style name="ProjectScreenTheme" parent="AppTheme.NoActionAndStatusBar">
         <item name="android:windowBackground">@drawable/background_image</item>
     </style>
 </resources>

@@ -1,16 +1,19 @@
 package com.owena.gads.leaderboard;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.owena.gads.leaderboard.adapters.LeaderBoardPagerAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
   private static final int LEARNING_LEADERS = 0;
   private static final int IQ_LEADERS = 1;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
   // Widget
   private ViewPager mViewPager;
   private Toolbar mToolbar;
+  private Button submitBtn;
 
   private FragmentPagerAdapter mPagerAdapter;
   @Override
@@ -34,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
     mViewPager = findViewById(R.id.view_pager);
     setupViewPager();
+
+    submitBtn = findViewById(R.id.btn_project);
+    submitBtn.setOnClickListener(this);
   }
 
   private void setupViewPager(){
@@ -50,5 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
     tabLayout.getTabAt(LEARNING_LEADERS).setText(getString(R.string.tag_fragment_learning));
     tabLayout.getTabAt(IQ_LEADERS).setText(getString(R.string.tag_fragment_skill_iq));
+  }
+
+  @Override
+  public void onClick(View v) {
+    startActivity(new Intent(this, ProjectActivity.class));
   }
 }

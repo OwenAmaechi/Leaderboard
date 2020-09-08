@@ -6,4 +6,5 @@
     <color name="custom_btn_color">#ffffff</color>
     <color name="text_color">#ffffff</color>
     <color name="tab_indicator_color">#ffffff</color>
+    <color name="gold_yellow">#F9A602</color>
 </resources>
