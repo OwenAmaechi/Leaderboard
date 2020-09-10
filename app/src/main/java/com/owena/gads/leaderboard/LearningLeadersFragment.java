@@ -54,7 +54,7 @@ public class LearningLeadersFragment extends Fragment {
       @Override
       public void onResponse(Call<ArrayList<Learner>> call, Response<ArrayList<Learner>> response) {
         mRecyclerView.setAdapter(new LearnersAdapter(response.body()));
-        Log.d(TAG, response.body().toString());
+//        Log.d(TAG, response.body().toString());
       }
 
       @Override

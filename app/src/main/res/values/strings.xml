@@ -22,4 +22,5 @@
     <string name="first_name">First Name</string>
     <string name="submission_message">Are you sure</string>
     <string name="submission_yes">Yes</string>
+    <string name="question_mark">\?</string>
 </resources>

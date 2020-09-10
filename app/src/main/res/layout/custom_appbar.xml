@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toStartOf="@+id/gads_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back" />
+            app:srcCompat="@drawable/ic_backspace" />
 
         <ImageView
             android:id="@+id/gads_logo"

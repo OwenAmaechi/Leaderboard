@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.owena.gads.leaderboard.R;
 import com.owena.gads.leaderboard.model.IQ;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -20,6 +22,7 @@ public class SkillIqAdapter extends RecyclerView.Adapter<SkillIqAdapter.SkillIqV
   private static final String TAG = "LearnersAdapter";
 
   private ArrayList<IQ> mIQS;
+  private Context mContext;
 
   public SkillIqAdapter(ArrayList<IQ> iqs) {
     mIQS = iqs;
@@ -28,8 +31,8 @@ public class SkillIqAdapter extends RecyclerView.Adapter<SkillIqAdapter.SkillIqV
   @NonNull
   @Override
   public SkillIqViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    Context context = parent.getContext();
-    View view = LayoutInflater.from(context).inflate(R.layout.skill_iq_item_layout, parent,false);
+    mContext = parent.getContext();
+    View view = LayoutInflater.from(mContext).inflate(R.layout.skill_iq_item_layout, parent,false);
 
     return new SkillIqViewHolder(view);
   }
@@ -37,7 +40,7 @@ public class SkillIqAdapter extends RecyclerView.Adapter<SkillIqAdapter.SkillIqV
   @Override
   public void onBindViewHolder(@NonNull SkillIqViewHolder holder, int position) {
     IQ iq = mIQS.get(position);
-    Log.d(TAG, "onBindViewHolder: "+ iq.toString());
+    Picasso.with(mContext).load(iq.getBadgeUrl()).into(holder.badgeUrl);
     holder.setData(iq);
   }
 
@@ -49,6 +52,7 @@ public class SkillIqAdapter extends RecyclerView.Adapter<SkillIqAdapter.SkillIqV
   public class SkillIqViewHolder extends RecyclerView.ViewHolder{
 
     TextView fullName, score, lCountry;
+    ImageView badgeUrl;
 
     public SkillIqViewHolder(@NonNull View itemView) {
       super(itemView);
@@ -56,8 +60,7 @@ public class SkillIqAdapter extends RecyclerView.Adapter<SkillIqAdapter.SkillIqV
       fullName = itemView.findViewById(R.id.txt_iq_learner_name);
       score = itemView.findViewById(R.id.txt_iq_score);
       lCountry = itemView.findViewById(R.id.txt_country);
-
-      Log.d(TAG, "LearnersViewHolder: "+ fullName+ " " + score+" "+lCountry);
+      badgeUrl = itemView.findViewById(R.id.skill_badge);
     }
 
     private void setData(IQ iq){
