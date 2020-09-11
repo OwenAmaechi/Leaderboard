@@ -50,7 +50,7 @@ public class SkillIQLeadersFragment extends Fragment {
       @Override
       public void onResponse(Call<ArrayList<IQ>> call, Response<ArrayList<IQ>> response) {
         mRecyclerView.setAdapter(new SkillIqAdapter(response.body()));
-        Log.d(TAG, response.body().toString());
+//        Log.d(TAG, response.body().toString());
       }
 
       @Override
