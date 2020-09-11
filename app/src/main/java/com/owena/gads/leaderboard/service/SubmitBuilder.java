@@ -6,7 +6,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SubmitBuilder {
 
   private static final String BASE_URL = "https://docs.google.com/forms/d/e/";
-// private static final String BASE_URL = "https://docs.google.com/forms/d/";
 
   private static Retrofit.Builder sBuilder = new Retrofit.Builder().baseUrl(BASE_URL)
                                                  .addConverterFactory(GsonConverterFactory.create());

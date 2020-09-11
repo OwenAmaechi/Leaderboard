@@ -3,6 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/gold_yellow"/>
     <size android:height="35dp" android:width="80dp"/>
-    <padding android:left="15dp" android:right="15dp" android:bottom="5dp" android:top="5dp"/>
-    <corners android:radius="55dp"/>
+    <padding android:left="15dp" android:right="15dp"
+        android:bottom="5dp"
+        android:top="5dp"/>
+    <corners android:radius="35dp"/>
+    <gradient
+        android:startColor="#ffffff"
+        android:endColor="@color/gold_yellow"
+        android:gradientRadius="100dp"
+        android:type="linear"
+        android:angle="0"
+        />
 </shape>
